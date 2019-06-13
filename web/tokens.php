@@ -9,9 +9,7 @@
         if($split != ""){
           array_push($tokens, $split);
         }
-    }
-    echo("\n");
-    echo(count($tokens));
+    }    
     closedir($dir);
     print_r($tokens);
   }
