@@ -6,9 +6,10 @@
     /* This is the correct way to loop over the directory. */
     while (false !== ($entry = readdir($dir))) {
         $split = explode(".", $entry)[0];
+        echo($split);
         array_push($tokens, $split);
     }
-
+    echo($tokens.count());
     closedir($dir);
     print_r($tokens);
   }
