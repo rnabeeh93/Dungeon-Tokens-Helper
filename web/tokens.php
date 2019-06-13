@@ -9,9 +9,9 @@
         if($split != ""){
           array_push($tokens, $split);
         }
-    }    
+    }
     closedir($dir);
-    print_r($tokens);
+    echo(json_encode($tokens));
   }
 
 ?>
