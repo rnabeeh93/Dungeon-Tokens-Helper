@@ -5,9 +5,10 @@
 
     /* This is the correct way to loop over the directory. */
     while (false !== ($entry = readdir($dir))) {
-        $split = explode(".", $entry)[0];
-        echo($split);
-        array_push($tokens, $split);
+        $split = str_replace(' ', '', explode(".", $entry)[0]);
+        if($split != ""){
+          array_push($tokens, $split);
+        }
     }
     echo("\n");
     echo(count($tokens));
