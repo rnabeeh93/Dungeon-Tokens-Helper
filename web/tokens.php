@@ -1,15 +1,16 @@
 <?php
 
   if ($dir = opendir('./DnD Icons')) {
-    echo "Directory: $dir\n";
-    echo "Entries:\n";
+    $tokens = array();
 
     /* This is the correct way to loop over the directory. */
     while (false !== ($entry = readdir($dir))) {
-        echo "$entry\n";
+        $split = explode(".", $entry)[0];
+        array_push($tokens, $split);
     }
 
     closedir($dir);
+    print_r($tokens);
   }
 
 ?>
